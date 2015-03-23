@@ -71,7 +71,6 @@ public class TestEmail {
 			multipart.addBodyPart(messageBodyPart);
 			
 			BodyPart messageBodyPart2 = new MimeBodyPart();
-			messageBodyPart2 = new MimeBodyPart();
 			String headerImgPath = this.getClass().getClassLoader().getResource("email-header.png").getPath();
 			String footerImgPath = this.getClass().getClassLoader().getResource("email-footer.png").getPath();
 			DataSource fds = new FileDataSource(headerImgPath);
@@ -82,7 +81,7 @@ public class TestEmail {
 	        BodyPart messageBodyPart3 = new MimeBodyPart();
 	        DataSource fds2 = new FileDataSource(footerImgPath);
 			messageBodyPart3.setDataHandler(new DataHandler(fds2));
-	        messageBodyPart3.setHeader("Content-ID", "<roca-email-footer>");
+	        messageBodyPart3.addHeader("Content-ID", "<roca-email-footer>");
 	        multipart.addBodyPart(messageBodyPart3);
 	        
 	        mimeMessage.setContent(multipart);
@@ -148,7 +147,7 @@ public class TestEmail {
 				+ "padding-top: 10px !important;"
 				+ "}"
 				+ "</style>"
-				+ "</head>"
+				+ ""
 				
 				
 				
