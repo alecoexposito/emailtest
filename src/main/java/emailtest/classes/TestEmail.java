@@ -152,7 +152,7 @@ public class TestEmail {
 				
 				
 				+ "<div class='main-roca-mail-div' style='margin-left: 262px color: #555555 !important; font-family: swiss_721roman !important;  font-size: 14px !important;'>"
-				+ "<img src=<img src=\"cid:roca-email-header\" style='width: 720px;' />"
+				+ "<img src=\"cid:roca-email-header\" style='width: 720px;' />"
 				+ "<br><br>"
 				+ "<div style='width: 709px'>Apreciado/a amigo/a, <br><br> Hemos recibido tu solicitud de"
 				+ "inscripci&oacute;n a fecha 15/03/2013 para asistir al curso que a"
