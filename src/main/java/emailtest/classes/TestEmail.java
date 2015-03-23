@@ -70,18 +70,20 @@ public class TestEmail {
 			messageBodyPart.setContent(htmlText, "text/html");
 			multipart.addBodyPart(messageBodyPart);
 			
-			messageBodyPart = new MimeBodyPart();
+			BodyPart messageBodyPart2 = new MimeBodyPart();
+			messageBodyPart2 = new MimeBodyPart();
 			String headerImgPath = this.getClass().getClassLoader().getResource("email-header.png").getPath();
 			String footerImgPath = this.getClass().getClassLoader().getResource("email-footer.png").getPath();
 			DataSource fds = new FileDataSource(headerImgPath);
-			messageBodyPart.setDataHandler(new DataHandler(fds));
-	        messageBodyPart.setHeader("Content-ID", "<roca-email-header>");
-	        multipart.addBodyPart(messageBodyPart);
+			messageBodyPart2.setDataHandler(new DataHandler(fds));
+	        messageBodyPart2.setHeader("Content-ID", "<roca-email-header>");
+	        multipart.addBodyPart(messageBodyPart2);
 	        
+	        BodyPart messageBodyPart3 = new MimeBodyPart();
 	        DataSource fds2 = new FileDataSource(footerImgPath);
-			messageBodyPart.setDataHandler(new DataHandler(fds2));
-	        messageBodyPart.setHeader("Content-ID", "<roca-email-footer>");
-	        multipart.addBodyPart(messageBodyPart);
+			messageBodyPart3.setDataHandler(new DataHandler(fds2));
+	        messageBodyPart3.setHeader("Content-ID", "<roca-email-footer>");
+	        multipart.addBodyPart(messageBodyPart3);
 	        
 	        mimeMessage.setContent(multipart);
 			
@@ -150,7 +152,7 @@ public class TestEmail {
 				
 				
 				
-				+ "<div style='margin-left: 262px'>"
+				+ "<div id='main-roca-mail-div' style='margin-left: 262px'>"
 				+ "<img src=<img src=\"cid:roca-email-header\" style='width: 720px;' />"
 				+ "<br><br>"
 				+ "<div style='width: 709px'>Apreciado/a amigo/a, <br><br> Hemos recibido tu solicitud de"
