@@ -152,7 +152,7 @@ public class TestEmail {
 				
 				
 				
-				+ "<div id='main-roca-mail-div' style='margin-left: 262px'>"
+				+ "<div id='main-roca-mail-div' style=''>"
 				+ "<img src=<img src=\"cid:roca-email-header\" style='width: 720px;' />"
 				+ "<br><br>"
 				+ "<div style='width: 709px'>Apreciado/a amigo/a, <br><br> Hemos recibido tu solicitud de"
