@@ -205,11 +205,11 @@ public class TestEmail {
 				+ "Jefe Formaci&oacute;n T&eacute;cnica Clientes"
 				+ "</div>"
 				+ "<div style='width: 709px'>"
+				+ "<br>"
+				+ "<br>"
 				+ "<img src=\"cid:roca-email-footer\" style='width: 720px;' />"
 				+ "<br><br>"
-				+ "</div>"
-				+ ""
-				+ "";
+				+ "</div>";
 		
 		return result;
 	}
