@@ -75,7 +75,7 @@ public class TestEmail {
 			String footerImgPath = this.getClass().getClassLoader().getResource("email-footer.png").getPath();
 			DataSource fds = new FileDataSource(headerImgPath);
 			messageBodyPart2.setDataHandler(new DataHandler(fds));
-	        messageBodyPart2.setHeader("Content-ID", "<roca-email-header>");
+	        messageBodyPart2.addHeader("Content-ID", "<roca-email-header>");
 	        multipart.addBodyPart(messageBodyPart2);
 	        
 	        BodyPart messageBodyPart3 = new MimeBodyPart();
