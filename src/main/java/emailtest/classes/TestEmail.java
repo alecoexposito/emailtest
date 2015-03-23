@@ -102,8 +102,8 @@ public class TestEmail {
 	private String getHtmlMailText() {
 
 		String result = "";
-		result = "<html>"
-				+ "<head>"
+		result = ""
+				+ ""
 				+ "<style type='text/css'>"
 				+ "#main-roca-mail-div {"
 				+ "color: #555555 !important;"
@@ -208,8 +208,8 @@ public class TestEmail {
 				+ "<img src=\"cid:roca-email-footer\" style='width: 720px;' />"
 				+ "<br><br>"
 				+ "</div>"
-				+ "</div>"
-				+ "</html>";
+				+ ""
+				+ "";
 		
 		return result;
 	}
